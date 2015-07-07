@@ -1,0 +1,11 @@
+.idea
+build/
+node_modules/
+release/
+.DS_Store
+doc/
+*.html
+*~
+dist/
+*.log
+signature/

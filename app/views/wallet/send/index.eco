@@ -1,0 +1,33 @@
+<section id="send_index_dialog">
+  <header>
+    <h1><%= t 'wallet.send.common.send_bitcoins' %></h1>
+  </header>
+  <table class="no-table-head">
+    <tbody>
+      <tr id="amount_row">
+        <td class="row-title"><%= t 'wallet.send.index.amount' %></td>
+        <td class="align-right">
+          <input id="amount_input" class="large-text-input" placeholder="<%= t 'wallet.send.index.amount_placeholder' %>" value=""/>
+          <label class="large-text-input"><%= ledger.formatters.getUnitSymbol() %></label>
+        </td>
+      </tr>
+      <tr>
+        <td class="row-title"><%= t 'wallet.send.index.receiver_address' %></td>
+        <td class="align-right">
+          <input class="text-input" placeholder="<%= t 'wallet.send.index.receiver_address_placeholder' %>" id="receiver_input" value=""/>
+        </td>
+      </tr>
+      <tr class="no-border">
+        <td class="row-title optional"><%= t 'wallet.send.index.total_spent' %></td>
+        <td class="align-right regular-grey-text-small" id="total_input"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<div id="error_container"></div>
+<div class="dialog-actions-bar">
+  <a id="open_scanner_button" class="cancel-rounded-button"><i class="fa fa-camera"></i></a>
+  <div class="left-spacer"></div>
+  <a class="cancel-rounded-button" href="#cancel"><%= t 'common.cancel' %></a>
+  <a class="action-rounded-button" href="#send" id="send_button"><%= t 'common.send' %></a>
+</div>

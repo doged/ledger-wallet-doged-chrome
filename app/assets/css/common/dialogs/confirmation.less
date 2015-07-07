@@ -1,0 +1,27 @@
+@import (reference) "../../common";
+
+section#dialogs_confirmation_dialog {
+  display:flex;
+  max-width: @dialog-width-default;
+
+  > .content-container {
+    text-align: center;
+
+    > .uppercase-section-title {
+      margin-top: @metrics-small-padding;
+    }
+
+    > .regular-text-small {
+      margin-top: @metrics-very-small-padding;
+      line-height: 20px;
+    }
+
+    > .dialog-actions-bar {
+      margin-top: @metrics-almost-medium-padding;
+    }
+  }
+
+  > .spacer {
+    width: @metrics-medium-padding;
+  }
+}

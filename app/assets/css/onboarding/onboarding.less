@@ -1,0 +1,100 @@
+@import (reference) "../constants";
+
+.main-container {
+  justify-content: center;
+}
+#content-container {
+  width: 100%;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+
+  // common containers
+  > .greyed-container {
+    background-color: @color-extra-light-grey;
+    padding: @metrics-large-padding 0;
+
+    .black-indication {
+      font-size: @font-size-very-large;
+      font-weight: @font-weight-light;
+      letter-spacing: -0.5px;
+    }
+
+    .medium-indication {
+      font-size: @font-size-medium;
+      font-weight: @font-weight-light;
+      letter-spacing: -0.2px;
+      color: @color-dark-grey;
+    }
+    a.medium-indication {
+      color: @color-dark-grey;
+      text-decoration: none;
+
+      &:hover {
+        color: darken(@color-dark-grey, @color-very-strong-darken-value)
+      }
+    }
+
+    .black-title {
+      font-size: @font-size-very-very-very-large;
+      letter-spacing: -0.5px;
+    }
+
+    .black-strong-title {
+      .black-title;
+      font-weight: @font-weight-semibold;
+    }
+
+    .black-title {
+      > b {
+        .black-title;
+        font-weight: @font-weight-semibold;
+      }
+    }
+
+    &.detailed {
+      display: flex;
+      text-decoration: none;
+      color: @color-black;
+      padding: 35px @metrics-ultra-large-padding;
+      padding-bottom: 30px;
+      margin-top: 20px;
+
+      .black-indication {
+        margin-top: 10px;
+        line-height: 25px;
+      }
+
+      > .index {
+        width: 46px;
+        font-size: 50px;
+        font-weight: @font-weight-light;
+        letter-spacing: -4px;
+      }
+
+      > .texts {
+        padding: 0 @metrics-medium-padding;
+      }
+
+      > .arrow {
+        margin-left: auto;
+        align-self: center;
+      }
+    }
+  }
+  a.greyed-container.detailed:hover {
+    background-color: darken(@color-extra-light-grey, 2%);
+  }
+
+  @import "device";
+  @import "management";
+}
+
+@media print {
+  #content-container {
+    height: 900px;
+    .navigation-container, .action-bar {
+      display: none;
+    }
+  }
+}

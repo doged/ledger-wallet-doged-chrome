@@ -1,0 +1,10 @@
+<div id="content-container">
+  <div class="logo-container">
+    <img src="../../assets/images/onboarding/large_logo.png" width="256" height="156">
+  </div>
+  <div class="greyed-container">
+    <span class="black-indication"><%= t 'onboarding.device.pin.enter_your_pin_code' %></span>
+    <div id="pin_container"></div>
+    <a href="#openSupport" class="medium-indication"><%= t 'onboarding.device.pin.i_lost_my_pin_code' %></a>
+  </div>
+</div>

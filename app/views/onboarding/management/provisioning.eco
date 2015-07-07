@@ -1,0 +1,9 @@
+<div id="content-container">
+  <div class="logo-container">
+    <img src="../../assets/images/onboarding/large_logo.png" width="256" height="156">
+  </div>
+  <div class="greyed-container">
+    <div class="black-title"><%= t 'onboarding.management.provisioning.provisioning' %></div>
+    <div class="black-indication"><%= t 'onboarding.management.provisioning.dont_unplug' %></div>
+  </div>
+</div>

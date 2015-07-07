@@ -1,0 +1,69 @@
+<div class="main-container">
+  <div id="wallet_top_menu" class="top-main-menu">
+    <ul class="left">
+      <li id="account-item" class="menu-item selected">
+        <div>
+          <a href="/wallet/accounts/0/show">
+            <img src="../assets/images/wallet/dashboard_icon.png" />
+            <span><%= t('wallet.top_menu.items.account') %></span>
+          </a>
+          <div class="spacer" />
+          <div class="selector" />
+        </div>
+      </li>
+      <li id="send-item" class="menu-item">
+        <div>
+          <a href="/wallet/send/index">
+            <img src="../assets/images/wallet/send_icon.png" />
+            <span><%= t('wallet.top_menu.items.send') %></span>
+          </a>
+          <div class="spacer" />
+          <div class="selector" />
+        </div>
+      </li>
+      <li id="receive-item" class="menu-item">
+        <div>
+          <a href="/wallet/receive/index">
+            <img src="../assets/images/wallet/receive_icon.png" />
+            <span><%= t('wallet.top_menu.items.receive') %></span>
+          </a>
+          <div class="spacer" />
+          <div class="selector" />
+        </div>
+      </li>
+      <li id="help-item" class="menu-item">
+        <div>
+          <a href="/wallet/help/index">
+            <img src="../assets/images/wallet/help_icon.png" />
+            <span><%= t('wallet.top_menu.items.help') %></span>
+          </a>
+          <div class="spacer" />
+          <div class="selector" />
+        </div>
+      </li>
+      <li id="settings-item" class="menu-item">
+        <div>
+          <a href="/wallet/settings/index">
+            <img src="../assets/images/wallet/settings_icon.png" />
+            <span><%= t('wallet.top_menu.items.settings') %></span>
+          </a>
+          <div class="spacer" />
+          <div class="selector" />
+        </div>
+      </li>
+    </ul>
+    <div class="right">
+      <div>
+        <p class="balance-label" id="currency_container"></p>
+        <p class="balance-value <%= if ledger.formatters.symbolIsFirst() then 'inverted' %>">
+          <span id="balance_value">0</span>
+          <sup><%= ledger.formatters.getUnitSymbol() %></sup>
+        </p>
+      </div>
+      <a class="reload-icon" id="reload_icon">
+        <img src="../assets/images/wallet/reload_icon.png" />
+      </a>
+    </div>
+  </div>
+  <div id="navigation_controller_content"></div>
+</div>
